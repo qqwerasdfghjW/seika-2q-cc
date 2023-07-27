@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+  <head>
+	<title>Game Checker</title>
+  </head>
+  <body>
+	<center>
+		<button onclick="removeItem()">削除</button>
+		<div style="width: 400px;"><canvas id="acquisitions"></canvas></div>
+		<script>
+		function removeItem() {
+		    let target = document.getElementById("acquisitions");
+		    target.remove();
+		}
+		</script>
+		<script type="module" src="app.js"></script>
+	</center>
+  </body>
+</html>
