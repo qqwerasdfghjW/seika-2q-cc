@@ -1,19 +1,102 @@
-<!doctype html>
-<html lang="en">
-  <head>
-	<title>Game Checker</title>
-  </head>
-  <body>
-	<center>
-		<button onclick="removeItem()">削除</button>
-		<div style="width: 400px;"><canvas id="acquisitions"></canvas></div>
-		<script>
-		function removeItem() {
-		    let target = document.getElementById("acquisitions");
-		    target.remove();
-		}
-		</script>
-		<script type="module" src="app.js"></script>
-	</center>
-  </body>
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="utf-8">
+		<title>DOG RANKING</title>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="http://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<script src="./js/scroll.js"></script>
+		<link rel="stylesheet" href="./css/reset.css">
+		<link rel="stylesheet" href="./css/common.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+		<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+			    $('.slider').bxSlider({
+				  auto: false,
+				  pause: 10000,
+			    });
+			});
+	    </script>
+	</head>
+	<body>
+		<div class="container">
+			<h1>DOG RANKING</h1>
+			<ul class="menu">
+				<li><a href="info">INFORMATION</a></li>
+				<li><a href="parts">CHARACTER</a></li>
+				<li><a href="spec">DETAIL</a></li>
+				<li><a href="game">PHOTO</a></li>
+			</ul>
+			<img src="./images/main_visual3.jpg" width="950" height="350" alt="メインビジュアル" class="main_visual">
+			<h2 id="info">INFORMATION</h2>
+			<ul class="info">
+				<li>このサイトは私が今まで一緒に過ごしてきた犬を細かく分析して、閲覧してもらおうというサイトです。</li>
+				<li>最近では犬の可愛さについて深く理解している人たちが減ってきているんじゃないかという懸念が私から出てき始めています。なのでこのサイトを機会により犬の可愛さの沼にハマっていただければなと思います。</li>
+			</ul>
+			<h2 id="parts">CHARACTER</h2>
+			<div class="concept concept1">
+				<img src="./images/concept/images01.jpg" width="220" height="220" alt="コンセプトおにぎり1">
+				<div>
+					<strong>Log<br>
+					Beagle</strong>
+					<p>ログは一番最初に一緒に過ごした犬です！
+						ログは私が生まれる前から自分の家にいた人生の先輩です。
+						とてもやんちゃな女の子で、よく新聞紙を破ったり服をぐちゃぐちゃにしては親に叱られていました。ほかにもご飯を食べるのが好きで、ご飯をあげた２分後にはペロリと完食しているような子でした。ビーグルは狩猟犬というのもあり、体を動かすのも好きでよく散歩に行っては引きずられていました。私が大きくなってもそれは変わらず手綱を握るのだけが静一派でした。</p>
+				</div>
+			</div>
+			<div class="concept concept2">
+				<img src="./images/concept/images02.jpg" width="220" height="220" alt="コンセプトおにぎり2">
+				<div>
+					<strong>Chocora<br>
+					Toy Poodle</strong>
+					<p>ショコラは幼少期から一緒に成長してきた兄弟です。
+						私が10歳の時に迎えた家族なのでまだ記憶に新しく感じます。ショコラはいい意味でとてもズル賢く他のトイプードルよりも比較的小さな男の子でした。普通のトイプードルの体重は3.4kg前後に比べてショコラは1.8kg前後という軽さでした。なので一緒に行動することも多くその際はよく持ち運んで肩車したりなど本当の弟のように接していました。ショコラは、また後で紹介するネロを含む合計4人の兄弟の父親で息子たちをよく躾けてくれていました。</p>
+				</div>
+			</div>
+			<div class="concept concept3">
+				<img src="./images/concept/images03.jpg" width="220" height="220" alt="コンセプトおにぎり3">
+				<div>
+					<strong>NERO<br>
+					Toy Poodle</strong>
+					<p>ネロはショコラの息子として生まれてきてくれました。
+						この子が生まれたのはつい最近で2016年に生まれてきてくらました。この子は他の二人に比べて、人間に対しては臆病で人見知りな傾向がありました。しかしながら運動神経は非常に素晴らしくケージを乗り上げる勢いのジャンプを披露してくれた時は驚きました。お母さんが運動神経がトップクラスだったのでその血を遺伝してくれたのかもしれません。他にも女性よりも男性を好む傾向があり家族の中では男の人によくひっついて寝たりしています。</p>
+				</div>
+			</div>
+			<h2 id="spec">DETAIL</h2>
+			<div class="box">
+				<img src="./images/concept/image07.jpg" width="300" height="350" alt="コンセプトおにぎり3">
+				<p>ここからは、私が厳選したこの子達の可愛い写真をのせていきます。またそれぞれの個性の強さも比較してグラフに示したいなと思います。<br>
+					グラフのせいで見にくいと感じましたら削除を押してください!<br>
+					黒白茶のいぬ - ログ<br>
+					黒灰色のいぬ - ショコラ<br>
+					真っ黒の少し大きないぬ - ネロ<br>
+					前述した通りネロはショコラの息子なのですが、成長するにつれて体が大きくなっているので分かりにくかもしれません</p>
+			</div>
+			<h2 id="game">PHOTO</h2>
+			<div>
+				<center>
+					<script type="module" src="app.js"></script>
+
+					<button onclick="removeItem()">削除</button>
+					<div style="width: 400px;"><canvas id="acquisitions"></canvas></div>
+					<script>
+					function removeItem() {
+						let target = document.getElementById("acquisitions");
+						target.remove();
+					}
+					</script>
+				</center>
+			</div>
+			<div class="last">
+				<div class="slider">
+					<img src="./images/concept/chocora.jpg" width="727" height="550" alt="">
+					<img src="./images/concept/nero.jpg" width="727" height="550" alt="">
+					<img src="./images/concept/parents.jpg" width="727" height="550" alt="">
+					<img src="./images/concept/log.jpg" width="727" height="550" alt="">
+				</div>
+			</div>
+		</div>
+	</body>
 </html>
+
